@@ -2,16 +2,16 @@ import React from "react";
 import { View, Text, StyleSheet, FlatList } from "react-native";
 
 const ListScreen = () => {
-  const clubs = [
-    { name: "Club Name #1" },
-    { name: "Club Name #2" },
-    { name: "Club Name #3" },
-    { name: "Club Name #4" },
-    { name: "Club Name #5" },
-    { name: "Club Name #6" },
-    { name: "Club Name #7" },
-    { name: "Club Name #8" },
-    { name: "Club Name #9" },
+  const events = [
+    { name: "Event Name #1" },
+    { name: "Event Name #2" },
+    { name: "Event Name #3" },
+    { name: "Event Name #4" },
+    { name: "Event Name #5" },
+    { name: "Event Name #6" },
+    { name: "Event Name #7" },
+    { name: "Event Name #8" },
+    { name: "Event Name #9" },
 
     // adding keys method 1
     // const clubs = [
@@ -28,7 +28,7 @@ const ListScreen = () => {
       // horizontal //Allows for a horizontal list
       // showsHorizontalScrollIndicator={false}
       keyExtractor={(friend) => friend.name} //method 2 of adding a key prop
-      data={clubs} // contains the array of objects
+      data={events} // contains the array of objects
       renderItem={({ item }) => {
         // destructuring single item property
         return <Text style={styles.textStyle}>{item.name}</Text>;
