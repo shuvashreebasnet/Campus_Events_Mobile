@@ -27,7 +27,7 @@ const ListScreen = () => {
     <FlatList
       // horizontal //Allows for a horizontal list
       // showsHorizontalScrollIndicator={false}
-      keyExtractor={(friend) => friend.name} //method 2 of adding a key prop
+      keyExtractor={(event) => event.name} //method 2 of adding a key prop
       data={events} // contains the array of objects
       renderItem={({ item }) => {
         // destructuring single item property
@@ -36,7 +36,11 @@ const ListScreen = () => {
     />
   );
 };
-
+// Add navigation options **here, after the component**
+ListScreen.navigationOptions = {
+  headerShown: true, // Show the header
+  title: "Events",
+};
 const styles = StyleSheet.create({
   textStyle: {
     marginVertical: 50,

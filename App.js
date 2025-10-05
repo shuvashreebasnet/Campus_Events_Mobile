@@ -7,13 +7,13 @@ import EventList from "./src/screens/EventList";
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
-    Club_List: ClubList,
     Event_List: EventList,
+    Club_List: ClubList,
   },
   {
-    initialRouteName: "Event_List",
+    initialRouteName: "Home",
     defaultNavigationOptions: {
-      title: "App",
+      title: "Campus Events",
       headerShown: false,
     },
   }
